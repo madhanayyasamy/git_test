@@ -1,0 +1,7 @@
+version: 0.0  
+os: linux  
+hooks:  
+  AfterInstall:  
+    - location: ansible_deploy.sh  
+      timeout: 30000 
+      runas: ubuntu 
