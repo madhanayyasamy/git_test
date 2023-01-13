@@ -13,8 +13,8 @@ ansible_inventory=$(head -n 1 env.txt)
 if [[ ${ansible_inventory} != "" ]]
 then
 echo $ansible_inventory
-cd /home/ubuntu/cync-devops-ansible
-ansible-playbook playbooks/angular.yml -i "dynamic-inventory/$ansible_inventory" --extra-vars "angular_version=$file_contents"
+cd /home/ubuntu/Cync-Devops/
+ansible-playbook playbooks/test.yml -i "dynamic-inventory/$ansible_inventory" --extra-vars "angular_version=$file_contents"
 else
   echo  " ${ansible_inventory} env name is not passed "
 fi
